@@ -135,7 +135,6 @@ p {
 }
 
 h1 {
-  font-family: ;
   color: #d9dad7;
   font-size: 5rem;
   text-shadow: 0.3rem 0.3rem 0.3rem #1a2639;
@@ -155,6 +154,7 @@ h3 {
 header {
   background: #3e4a61;
   padding: 5rem;
+  height: 20rem;
 }
 header p {
   margin: 1rem 2rem;
@@ -186,6 +186,7 @@ header a:hover {
   flex-direction: column;
   border-bottom: 0.5rem solid #c24d2c;
 }
+
 .citiescontainer {
   display: flex;
   flex-direction: column;
@@ -202,6 +203,7 @@ header a:hover {
   background: url(https://i.pinimg.com/originals/a8/d1/ae/a8d1ae6bdc3c44abe78a0142fb265455.png)
     no-repeat center;
   width: 50%;
+  min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
@@ -209,6 +211,7 @@ header a:hover {
   background: url(https://i.pinimg.com/originals/16/d9/db/16d9db6c01130327c06fe1e92d097041.jpg)
     no-repeat center;
   width: 50%;
+  min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
@@ -216,6 +219,7 @@ header a:hover {
   background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49cd5367420321.5b399170bd4bf.jpg)
     no-repeat center;
   width: 50%;
+  min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
@@ -223,6 +227,7 @@ header a:hover {
   background: url(https://thumbs.dreamstime.com/z/illustrated-map-lisbon-cute-fun-hand-drawn-characters-local-plants-elements-color-vector-illustration-big-141639238.jpg)
     no-repeat center;
   width: 50%;
+  min-width: 50rem;
   background-size: cover;
   background-position: right;
 }
