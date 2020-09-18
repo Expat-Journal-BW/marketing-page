@@ -108,6 +108,7 @@ section {
 body {
   line-height: 1;
   background-color: #d9dad7;
+  font-family: Comic Sans MS, Verdana, Geneva, Tahoma, sans-serif;
 }
 ol,
 ul {
@@ -129,7 +130,7 @@ table {
   border-spacing: 0;
 }
 p {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #c24d2c;
   text-shadow: 0.1rem 0.1rem #1a2639;
 }
@@ -142,9 +143,11 @@ h1 {
 }
 
 h2 {
-  color: #1a2639;
+  color: #c24d2c;
+  text-shadow: 0.3rem 0.3rem 0.3rem #1a2639;
   font-size: 4rem;
   text-align: center;
+  font-weight: bold;
 }
 
 h3 {
@@ -159,7 +162,8 @@ header {
 header p {
   margin: 1rem 2rem;
 }
-header a {
+
+.navbar a {
   color: #1a2639;
   font-size: 2rem;
   text-align: center;
@@ -173,13 +177,14 @@ header a {
   border: 0.2rem solid #1a2639;
   box-shadow: 0.5rem 0.5rem 0.5rem #1a2639;
 }
-header a:hover {
+.navbar a:hover {
   color: #d9dad7;
   background: #c24d2c;
 }
-.navbar {
+header .navbar {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 .headercontainer {
   display: flex;
@@ -200,32 +205,33 @@ header a:hover {
   width: 100%;
 }
 .barcelonabg {
-  background: url(https://i.pinimg.com/originals/a8/d1/ae/a8d1ae6bdc3c44abe78a0142fb265455.png)
-    no-repeat center;
+  background: url("../img/barcelona-map.png") no-repeat center;
   width: 50%;
+  /* opacity: 0.5;
+  z-index: 0; */
   min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
+/* .image {
+  z-index: 1;
+} */
 .dublinbg {
-  background: url(https://i.pinimg.com/originals/16/d9/db/16d9db6c01130327c06fe1e92d097041.jpg)
-    no-repeat center;
+  background: url("../img/Dublin-map.jpg") no-repeat center;
   width: 50%;
   min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
 .tokyobg {
-  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/49cd5367420321.5b399170bd4bf.jpg)
-    no-repeat center;
+  background: url("../img/Tokyo-map.jpg") no-repeat center;
   width: 50%;
   min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
 .lisbonbg {
-  background: url(https://thumbs.dreamstime.com/z/illustrated-map-lisbon-cute-fun-hand-drawn-characters-local-plants-elements-color-vector-illustration-big-141639238.jpg)
-    no-repeat center;
+  background: url("../img/Lisbon-map.jpg") no-repeat center;
   width: 50%;
   min-width: 50rem;
   background-size: cover;
@@ -233,7 +239,7 @@ header a:hover {
 }
 .citycontainer {
   background: rgba(217, 218, 215, 0.8); /*this gives opacity to background*/
-  background-size: 100%;
+  background-size: 100%; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -246,10 +252,219 @@ header a:hover {
   height: 10rem;
   margin: 2rem;
   object-fit: cover;
-  border-radius: 7.5rem;
+  border-radius: 5rem;
 }
 .citycontainer img:hover {
   transform: scale(4);
   margin: 0;
   border-radius: 0.5rem;
+  z-index: 1;
+}
+
+footer {
+  background: #3e4a61;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.5rem solid #c24d2c;
+}
+footer .navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@media (max-width: 100rem) {
+  .citiesrow {
+    /* flex-direction: column; */
+    align-items: center;
+    width: 100%;
+  }
+  .citiescontainer {
+    justify-content: center;
+    width: 100%;
+  }
+  .barcelonabg {
+    width: 100%;
+  }
+  .dublinbg {
+    width: 100%;
+  }
+  .tokyobg {
+    width: 100%;
+  }
+  .lisbonbg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 50rem) {
+  .citycontainer {
+    width: 100vw;
+  }
+  .citycontainer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .citycontainer img:hover {
+    transform: scale(3);
+    margin: 0;
+    border-radius: 0.5rem;
+  }
+}
+
+
+.imageclass {
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+.imageclass button {
+    display:inline-block;
+    width:10rem;
+    height:10rem;
+    background-size:cover;
+    position:absolute;
+    /* z-index:1; */
+    border-radius:5rem;
+    font-family:Comic Sans MS, Verdana, Geneva, Tahoma, sans-serif;
+    color:#c24d2c;
+    text-shadow: .03rem .03rem .03rem #1a2639;
+    border:none;
+}
+.imageclass button:hover{
+    transform: scale(4);
+    margin: 0;
+    border-radius: 0.5rem;
+    z-index:2;
+    position: fixed;
+    left:45%;
+    top:45%;
+}
+.imageclass img{
+    opacity:0;
+    z-index:-1;
+}
+
+.arcdetriomf {
+    background:url("../img/Barcelona-Arc-de-Triomf.jpg") 
+}
+.campnou {
+    background: url("../img/Barcelona-Camp-Nou.jpg")
+}
+.casabatllo {
+    background: url("../img/Barcelona-Casa-Batllo.jpg")
+}
+.chocolatemuseum {
+    background: url("../img/Barcelona-Chocolate-museum.jpeg")
+}
+.larambla {
+    background: url("../img/Barcelona-La-Rambla.jpg")
+}
+.parkguell {
+    background: url("../img/Barcelona-Park-Guell.jpg")
+}
+.picassomuseum {
+    background: url("../img/Barcelona-Picasso-Museum.jpg")
+}
+.sagradafamilia {
+    background: url("../img/Barcelona-Sagrada-Familia.jpg")
+}
+.barceloneta {
+    background: url("../img/Barcelona-Barceloneta.jpg")
+}
+
+.dublincastle {
+    background: url("../img/Dublin Castle.jpg")
+}
+.stpatrickscathedral {
+    background: url("../img/DublinSt.Patricks Cathedral.jpeg")
+}
+.guinnessstorehouse {
+    background: url("../img/Dublin-Guinness Storehouse.jpg")
+}
+.rocknroll {
+    background: url("../img/Dublin-Irish Rock n Roll Museum.jpg")
+}
+.howth {
+    background: url("../img/Dublin-howth.jpeg")
+}
+.jamesondistillery {
+    background: url("../img/Dublin-Jameson Distillery.jpg")
+}
+.silicondocks {
+    background: url("../img/Dublin-Silicon Docks.jpg")
+}
+.spire {
+    background: url("../img/Dublin-Spire.jpg")
+}
+.dublinnationalmuseum {
+    background: url("../img/Dublin-National Museum.jpg")
+}
+.ginzadistrict {
+    background:url("../img/Tokyo-Ginza District.jpg") 
+}
+.kabukizatheatre {
+    background: url("../img/Tokyo-Kabuki-za_Theatre.jpg")
+}
+.meijishrine {
+    background: url("../img/Tokyo-Meiji Shrine.jpeg")
+}
+.miraikanmuseum {
+    background: url("../img/Tokyo-Miraikan Museum.jpg")
+}
+.nationalartcenter {
+    background: url("../img/Tokyo-National Art Center.jpg")
+}
+.sensojitemple {
+    background: url("../img/Tokyo-sensoji-temple.jpg")
+}
+.shibuya {
+    background: url("../img/Tokyo-Shibuya.jpg")
+}
+.skytree {
+    background: url("../img/Tokyo-skytree.jpg")
+}
+.uenopark {
+    background: url("../img/tokyo-Ueno park.jpg")
+}
+
+.aquaslibres {
+    background: url("../img/Lisbon-Aquas Libres Aqueduct.jpg")
+}
+.castelodesaojorge{
+    background: url("../img/Lisbon-castelo-de-sao-jorge.jpg")
+}
+.elevadordesantajusta {
+    background: url("../img/Lisbon-Elevador de Santa Justa.jpg")
+}
+.estreladebasilica{
+    background: url("../img/Lisbon-Estrela da Basilica.jpg")
+}
+.mosteirodosjeronimos{
+    background: url("../img/Lisbon-mosteiro-dos-jeronimos.jpg")
+}
+.nationalcoachmuseum {
+    background: url("../img/Lisbon-National Coach Museum.JPG")
+}
+.padraodosdescobrimentos {
+    background: url("../img/Lisbon-padrao-dos-descobrimentos.jpeg")
+}
+.sintra {
+    background: url("../img/Lisbon-Sintra.jpg")
+}
+.torrebelem {
+    background: url("../img/Lisbon-torre-belem.jpg")
+}
+
+.imageclass h3{
+    opacity:0;
+}
+.imageclass:hover h3{
+    opacity:1;
 }
