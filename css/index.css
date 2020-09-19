@@ -129,59 +129,53 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-p {
-  font-size: 3rem;
-  color: #c24d2c;
-  text-shadow: 0.1rem 0.1rem #1a2639;
-}
 
 h1 {
   color: #d9dad7;
   font-size: 5rem;
   text-shadow: 0.3rem 0.3rem 0.3rem #1a2639;
-  margin: 0;
 }
 
 h2 {
   color: #c24d2c;
   text-shadow: 0.3rem 0.3rem 0.3rem #1a2639;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: bold;
+  margin: 5% 0;
 }
 
-h3 {
-  font-size: 1.5rem;
-  color: #1a2639;
-}
 header {
-  background: #3e4a61;
-  padding: 5rem;
-  height: 20rem;
+  background-image: linear-gradient(to right, #3e4a61, #1a2639);
+  padding: 3%;
+  height: 20%;
 }
 header p {
-  margin: 1rem 2rem;
+  margin: 1% 2%;
+  font-size: 3rem;
+  color: #c24d2c;
+  text-shadow: 0.1rem 0.1rem #1a2639;
 }
 
 .navbar a {
   color: #1a2639;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
-  padding-top: 1rem;
-  margin-top: 2rem;
-  width: 10rem;
-  height: 3rem;
+  padding: 0.5% 1%;
+  margin-top: 2%;
+  width: 8vw;
+  height: 3vh;
   background: #d9dad7;
-  border-radius: 1rem;
-  border: 0.2rem solid #1a2639;
-  box-shadow: 0.5rem 0.5rem 0.5rem #1a2639;
+  border-radius: 5%;
+  border: 0.2% solid #1a2639;
+  box-shadow: 0.5% 0.5% 0.5% #1a2639;
 }
 .navbar a:hover {
   color: #d9dad7;
   background: #c24d2c;
 }
-header .navbar {
+.navbar {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -191,99 +185,111 @@ header .navbar {
   flex-direction: column;
   border-bottom: 0.5rem solid #c24d2c;
 }
-
 .citiescontainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
-.citiesrow {
+.cityrow {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
+
+.journalentry {
+  color: #c24d2c;
+  text-shadow: 0.03rem 0.03rem 0.03rem #1a2639;
+  position: relative;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 1s ease;
+  background-size: cover;
+  margin: 1vw;
+}
+
+.animation {
+  height: 8vw;
+  width: 8vw;
+  opacity: 0;
+  background: #d9dad7;
+  position: inherit;
+  background-size: cover;
+  bottom: -150%;
+  text-align: center;
+}
+
+.journalentry:hover {
+  transform: scale(3);
+  z-index: 1;
+  border-radius: 5%;
+}
+.journalentry:hover .animation {
+  transform: translateY(-100%);
+  opacity: 0.7;
+  transition: 2s ease;
+}
 .barcelonabg {
   background: url("../img/barcelona-map.png") no-repeat center;
   width: 50%;
-  /* opacity: 0.5;
-  z-index: 0; */
-  min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
-/* .image {
-  z-index: 1;
-} */
 .dublinbg {
   background: url("../img/Dublin-map.jpg") no-repeat center;
   width: 50%;
-  min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
 .tokyobg {
   background: url("../img/Tokyo-map.jpg") no-repeat center;
   width: 50%;
-  min-width: 50rem;
   background-size: cover;
   background-position: top;
 }
 .lisbonbg {
   background: url("../img/Lisbon-map.jpg") no-repeat center;
   width: 50%;
-  min-width: 50rem;
   background-size: cover;
   background-position: right;
 }
 .citycontainer {
   background: rgba(217, 218, 215, 0.8); /*this gives opacity to background*/
-  background-size: 100%; */
+  background-size: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2%;
-}
-.citycontainer img {
-  width: 10rem;
-  height: 10rem;
-  margin: 2rem;
-  object-fit: cover;
-  border-radius: 5rem;
-}
-.citycontainer img:hover {
-  transform: scale(4);
-  margin: 0;
-  border-radius: 0.5rem;
-  z-index: 1;
 }
 
 footer {
-  background: #3e4a61;
-  height: 20rem;
+  background-image: linear-gradient(to right, #3e4a61, #1a2639);
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-top: 0.5rem solid #c24d2c;
-}
-footer .navbar {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+  /* padding:0 1rem; */
 }
 
-@media (max-width: 100rem) {
-  .citiesrow {
-    /* flex-direction: column; */
-    align-items: center;
-    width: 100%;
+@media (max-width: 1024px) {
+  header {
+    padding: 3rem;
   }
   .citiescontainer {
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+  }
+  .animation p {
+    font-size: 0.1rem;
+  }
+  .journalentry:hover {
+    transform: scale(4);
+  }
+  footer {
+    height: 15vh;
   }
   .barcelonabg {
     width: 100%;
@@ -299,172 +305,205 @@ footer .navbar {
   }
 }
 
-@media (max-width: 50rem) {
-  .citycontainer {
-    width: 100vw;
+@media (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
   }
-  .citycontainer div {
-    display: flex;
+  h2 {
+    font-size: 2.5rem;
+  }
+  header {
+    padding: 1.5rem;
+    height: 10vh;
+  }
+  header p {
+    font-size: 1.5rem;
+  }
+  .animation {
+    bottom: -120%;
+  }
+  .navbar a {
+    font-size: 1.2rem;
+    width: 15vw;
+    height: 2vh;
+  }
+  .animation p {
+    font-size: 0.5rem;
+  }
+  footer {
+    height: 10vh;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    padding: 4vw;
+    height: 10vh;
+  }
+  .navbar a {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .cityrow {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
-  .citycontainer img:hover {
-    transform: scale(3);
-    margin: 0;
-    border-radius: 0.5rem;
+  .journalentry {
+    width: 20vw;
+    height: 20vw;
   }
-}
-
-
-.imageclass {
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-}
-.imageclass button {
-    display:inline-block;
-    width:10rem;
-    height:10rem;
-    background-size:cover;
-    position:absolute;
-    /* z-index:1; */
-    border-radius:5rem;
-    font-family:Comic Sans MS, Verdana, Geneva, Tahoma, sans-serif;
-    color:#c24d2c;
-    text-shadow: .03rem .03rem .03rem #1a2639;
-    border:none;
-}
-.imageclass button:hover{
-    transform: scale(4);
-    margin: 0;
-    border-radius: 0.5rem;
-    z-index:2;
-    position: fixed;
-    left:45%;
-    top:45%;
-}
-.imageclass img{
-    opacity:0;
-    z-index:-1;
+  .animation {
+    width: 20vw;
+    height: 20vw;
+    bottom: -150%;
+  }
 }
 
 .arcdetriomf {
-    background:url("../img/Barcelona-Arc-de-Triomf.jpg") 
+  background: url("../img/Barcelona-Arc-de-Triomf.jpg");
+  background-size: cover;
 }
 .campnou {
-    background: url("../img/Barcelona-Camp-Nou.jpg")
+  background: url("../img/Barcelona-Camp-Nou.jpg");
+  background-size: cover;
 }
 .casabatllo {
-    background: url("../img/Barcelona-Casa-Batllo.jpg")
+  background: url("../img/Barcelona-Casa-Batllo.jpg");
+  background-size: cover;
 }
 .chocolatemuseum {
-    background: url("../img/Barcelona-Chocolate-museum.jpeg")
+  background: url("../img/Barcelona-Chocolate-museum.jpeg");
+  background-size: cover;
 }
 .larambla {
-    background: url("../img/Barcelona-La-Rambla.jpg")
+  background: url("../img/Barcelona-La-Rambla.jpg");
+  background-size: cover;
 }
 .parkguell {
-    background: url("../img/Barcelona-Park-Guell.jpg")
+  background: url("../img/Barcelona-Park-Guell.jpg");
+  background-size: cover;
 }
 .picassomuseum {
-    background: url("../img/Barcelona-Picasso-Museum.jpg")
+  background: url("../img/Barcelona-Picasso-Museum.jpg");
+  background-size: cover;
 }
 .sagradafamilia {
-    background: url("../img/Barcelona-Sagrada-Familia.jpg")
+  background: url("../img/Barcelona-Sagrada-Familia.jpg");
+  background-size: cover;
 }
 .barceloneta {
-    background: url("../img/Barcelona-Barceloneta.jpg")
+  background: url("../img/Barcelona-Barceloneta.jpg");
+  background-size: cover;
 }
 
 .dublincastle {
-    background: url("../img/Dublin Castle.jpg")
+  background: url("../img/Dublin Castle.jpg");
+  background-size: cover;
 }
 .stpatrickscathedral {
-    background: url("../img/DublinSt.Patricks Cathedral.jpeg")
+  background: url("../img/DublinSt.Patricks Cathedral.jpeg");
+  background-size: cover;
 }
 .guinnessstorehouse {
-    background: url("../img/Dublin-Guinness Storehouse.jpg")
+  background: url("../img/Dublin-Guinness Storehouse.jpg");
+  background-size: cover;
 }
 .rocknroll {
-    background: url("../img/Dublin-Irish Rock n Roll Museum.jpg")
+  background: url("../img/Dublin-Irish Rock n Roll Museum.jpg");
+  background-size: cover;
 }
 .howth {
-    background: url("../img/Dublin-howth.jpeg")
+  background: url("../img/Dublin-howth.jpeg");
+  background-size: cover;
 }
 .jamesondistillery {
-    background: url("../img/Dublin-Jameson Distillery.jpg")
+  background: url("../img/Dublin-Jameson Distillery.jpg");
+  background-size: cover;
 }
 .silicondocks {
-    background: url("../img/Dublin-Silicon Docks.jpg")
+  background: url("../img/Dublin-Silicon Docks.jpg");
+  background-size: cover;
 }
 .spire {
-    background: url("../img/Dublin-Spire.jpg")
+  background: url("../img/Dublin-Spire.jpg");
+  background-size: cover;
 }
 .dublinnationalmuseum {
-    background: url("../img/Dublin-National Museum.jpg")
+  background: url("../img/Dublin-National Museum.jpg");
+  background-size: cover;
 }
 .ginzadistrict {
-    background:url("../img/Tokyo-Ginza District.jpg") 
+  background: url("../img/Tokyo-Ginza District.jpg");
+  background-size: cover;
 }
 .kabukizatheatre {
-    background: url("../img/Tokyo-Kabuki-za_Theatre.jpg")
+  background: url("../img/Tokyo-Kabuki-za_Theatre.jpg");
+  background-size: cover;
 }
 .meijishrine {
-    background: url("../img/Tokyo-Meiji Shrine.jpeg")
+  background: url("../img/Tokyo-Meiji Shrine.jpeg");
+  background-size: cover;
 }
 .miraikanmuseum {
-    background: url("../img/Tokyo-Miraikan Museum.jpg")
+  background: url("../img/Tokyo-Miraikan Museum.jpg");
+  background-size: cover;
 }
 .nationalartcenter {
-    background: url("../img/Tokyo-National Art Center.jpg")
+  background: url("../img/Tokyo-National Art Center.jpg");
+  background-size: cover;
 }
 .sensojitemple {
-    background: url("../img/Tokyo-sensoji-temple.jpg")
+  background: url("../img/Tokyo-sensoji-temple.jpg");
+  background-size: cover;
 }
 .shibuya {
-    background: url("../img/Tokyo-Shibuya.jpg")
+  background: url("../img/Tokyo-Shibuya.jpg");
+  background-size: cover;
 }
 .skytree {
-    background: url("../img/Tokyo-skytree.jpg")
+  background: url("../img/Tokyo-skytree.jpg");
+  background-size: cover;
 }
 .uenopark {
-    background: url("../img/tokyo-Ueno park.jpg")
+  background: url("../img/tokyo-Ueno park.jpg");
+  background-size: cover;
 }
 
 .aquaslibres {
-    background: url("../img/Lisbon-Aquas Libres Aqueduct.jpg")
+  background: url("../img/Lisbon-Aquas Libres Aqueduct.jpg");
+  background-size: cover;
 }
-.castelodesaojorge{
-    background: url("../img/Lisbon-castelo-de-sao-jorge.jpg")
+.castelodesaojorge {
+  background: url("../img/Lisbon-castelo-de-sao-jorge.jpg");
+  background-size: cover;
 }
 .elevadordesantajusta {
-    background: url("../img/Lisbon-Elevador de Santa Justa.jpg")
+  background: url("../img/Lisbon-Elevador de Santa Justa.jpg");
+  background-size: cover;
 }
-.estreladebasilica{
-    background: url("../img/Lisbon-Estrela da Basilica.jpg")
+.estreladebasilica {
+  background: url("../img/Lisbon-Estrela da Basilica.jpg");
+  background-size: cover;
 }
-.mosteirodosjeronimos{
-    background: url("../img/Lisbon-mosteiro-dos-jeronimos.jpg")
+.mosteirodosjeronimos {
+  background: url("../img/Lisbon-mosteiro-dos-jeronimos.jpg");
+  background-size: cover;
 }
 .nationalcoachmuseum {
-    background: url("../img/Lisbon-National Coach Museum.JPG")
+  background: url("../img/Lisbon-National Coach Museum.JPG");
+  background-size: cover;
 }
 .padraodosdescobrimentos {
-    background: url("../img/Lisbon-padrao-dos-descobrimentos.jpeg")
+  background: url("../img/Lisbon-padrao-dos-descobrimentos.jpeg");
+  background-size: cover;
 }
 .sintra {
-    background: url("../img/Lisbon-Sintra.jpg")
+  background: url("../img/Lisbon-Sintra.jpg");
+  background-size: cover;
 }
 .torrebelem {
-    background: url("../img/Lisbon-torre-belem.jpg")
-}
-
-.imageclass h3{
-    opacity:0;
-}
-.imageclass:hover h3{
-    opacity:1;
+  background: url("../img/Lisbon-torre-belem.jpg");
+  background-size: cover;
 }
