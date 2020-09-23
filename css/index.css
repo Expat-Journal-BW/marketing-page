@@ -107,8 +107,9 @@ section {
 }
 body {
   line-height: 1;
-  background-color: #d9dad7;
-  font-family: Comic Sans MS, Verdana, Geneva, Tahoma, sans-serif;
+  background: url("../img/World_map.png") no-repeat center;
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ol,
 ul {
@@ -129,381 +130,159 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 h1 {
   color: #d9dad7;
   font-size: 5rem;
-  text-shadow: 0.3rem 0.3rem 0.3rem #1a2639;
-}
-
-h2 {
-  color: #c24d2c;
-  text-shadow: 0.3rem 0.3rem 0.3rem #1a2639;
-  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #c24d2c;
+  margin-bottom: 2%;
   text-align: center;
-  font-weight: bold;
-  margin: 5% 0;
+  padding-top: 5%;
 }
-
-header {
-  background-image: linear-gradient(to right, #3e4a61, #1a2639);
-  padding: 3%;
-  height: 20%;
-}
-header p {
-  margin: 1% 2%;
-  font-size: 3rem;
+h1::first-letter {
+  font-size: 6rem;
   color: #c24d2c;
-  text-shadow: 0.1rem 0.1rem #1a2639;
+  text-shadow: 0.1rem 0.1rem 0.1rem #1a2639;
 }
-
+h3 {
+  color: #c24d2c;
+  margin: 2% 0;
+}
+.maincontainer {
+  background-image: linear-gradient(to right, #3e4a61, #1a2639);
+  opacity: 0.9;
+  width: 100vw;
+  height: 100%;
+  background-size: cover;
+}
 .navbar a {
   color: #1a2639;
   font-size: 1.5rem;
-  text-align: center;
   text-decoration: none;
-  padding: 0.5% 1%;
-  margin-top: 2%;
-  width: 8vw;
-  height: 3vh;
-  background: #d9dad7;
+  margin: 1%;
   border-radius: 5%;
-  border: 0.2% solid #1a2639;
-  box-shadow: 0.5% 0.5% 0.5% #1a2639;
 }
 .navbar a:hover {
-  color: #d9dad7;
-  background: #c24d2c;
+  color: #c24d2c;
+  text-shadow: 0.1rem 0.1rem 0.1rem #1a2639;
 }
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-.headercontainer {
+.innercontainer {
   display: flex;
   flex-direction: column;
-  border-bottom: 0.5rem solid #c24d2c;
+  align-items: center;
+  /* background: blue; */
 }
-.citiescontainer {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.missionstatement {
+  width: 40%;
+  /* background: red; */
+  margin: 5%;
 }
-.cityrow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
+.missionstatement p {
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+  color: #d9dad7;
 }
-
-.journalentry {
-  color: #c24d2c;
-  text-shadow: 0.03rem 0.03rem 0.03rem #1a2639;
-  position: relative;
-  height: 8vw;
-  width: 8vw;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: 1s ease;
-  background-size: cover;
-  margin: 1vw;
-}
-
-.animation {
-  height: 8vw;
-  width: 8vw;
-  opacity: 0;
-  background: #d9dad7;
-  position: inherit;
-  background-size: cover;
-  bottom: -150%;
+.users a {
+  display: inline-block;
   text-align: center;
 }
-
-.journalentry:hover {
-  transform: scale(3);
-  z-index: 1;
-  border-radius: 5%;
-}
-.journalentry:hover .animation {
-  transform: translateY(-100%);
-  opacity: 0.7;
-  transition: 2s ease;
-}
-.barcelonabg {
-  background: url("../img/barcelona-map.png") no-repeat center;
-  width: 50%;
-  background-size: cover;
-  background-position: top;
-}
-.dublinbg {
-  background: url("../img/Dublin-map.jpg") no-repeat center;
-  width: 50%;
-  background-size: cover;
-  background-position: top;
-}
-.tokyobg {
-  background: url("../img/Tokyo-map.jpg") no-repeat center;
-  width: 50%;
-  background-size: cover;
-  background-position: top;
-}
-.lisbonbg {
-  background: url("../img/Lisbon-map.jpg") no-repeat center;
-  width: 50%;
-  background-size: cover;
-  background-position: right;
-}
-.citycontainer {
-  background: rgba(217, 218, 215, 0.8); /*this gives opacity to background*/
-  background-size: 100%;
+.users img {
   width: 100%;
+}
+.users {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  color: #d9dad7;
+  width: 20%;
+  line-height: 1.5;
+  margin-bottom: 3%;
 }
 
-footer {
-  background-image: linear-gradient(to right, #3e4a61, #1a2639);
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 0.5rem solid #c24d2c;
-  /* padding:0 1rem; */
+.signup {
+  text-align: center;
+  background-color: #c24d2c;
+  width: 100%;
+  padding: 5% 0;
 }
 
+.signup button {
+  font-size: 3rem;
+  color: #3e4a61;
+  width: 30vw;
+  height: 8vh;
+  border-radius: 1vw;
+  border: none;
+}
+
+.signup button:hover {
+  box-shadow: none;
+  color: #1a2639;
+  border: 0.2rem solid #3e4a61;
+}
+
+footer .navbar {
+  padding: 3%;
+}
+
+@media (max-width: 1380px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .missionstatement p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .users {
+    width: 25%;
+  }
+}
 @media (max-width: 1024px) {
-  header {
-    padding: 3rem;
+  .missionstatement {
+    width: 45%;
   }
-  .citiescontainer {
-    flex-direction: column;
+  .missionstatement p {
+    font-size: 1.2rem;
+    line-height: 1.5;
   }
-  .animation p {
-    font-size: 0.1rem;
+  .users {
+    width: 30%;
   }
-  .journalentry:hover {
-    transform: scale(4);
-  }
-  footer {
-    height: 15vh;
-  }
-  .barcelonabg {
-    width: 100%;
-  }
-  .dublinbg {
-    width: 100%;
-  }
-  .tokyobg {
-    width: 100%;
-  }
-  .lisbonbg {
-    width: 100%;
+  .signup button {
+    font-size: 2rem;
+    width: 40vw;
   }
 }
-
 @media (max-width: 800px) {
   h1 {
-    font-size: 3rem;
-  }
-  h2 {
     font-size: 2.5rem;
-  }
-  header {
-    padding: 1.5rem;
-    height: 10vh;
-  }
-  header p {
-    font-size: 1.5rem;
-  }
-  .animation {
-    bottom: -120%;
   }
   .navbar a {
     font-size: 1.2rem;
-    width: 15vw;
-    height: 2vh;
   }
-  .animation p {
-    font-size: 0.5rem;
+  .missionstatement {
+    width: 50%;
   }
-  footer {
-    height: 10vh;
+  .users {
+    width: 35%;
+  }
+  .signup button {
+    font-size: 1.5rem;
+    width: 45vw;
+    height: 6vh;
   }
 }
 @media (max-width: 500px) {
-  header {
-    padding: 4vw;
-    height: 10vh;
-  }
-  .navbar a {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
-  h2 {
+  h1 {
     font-size: 2rem;
   }
-  .cityrow {
-    flex-direction: column;
-    align-items: center;
+  header {
+    padding: 1%;
   }
-  .journalentry {
-    width: 20vw;
-    height: 20vw;
+  .missionstatement {
+    width: 60%;
   }
-  .animation {
-    width: 20vw;
-    height: 20vw;
-    bottom: -150%;
+  .users {
+    width: 45%;
   }
-}
-
-.arcdetriomf {
-  background: url("../img/Barcelona-Arc-de-Triomf.jpg");
-  background-size: cover;
-}
-.campnou {
-  background: url("../img/Barcelona-Camp-Nou.jpg");
-  background-size: cover;
-}
-.casabatllo {
-  background: url("../img/Barcelona-Casa-Batllo.jpg");
-  background-size: cover;
-}
-.chocolatemuseum {
-  background: url("../img/Barcelona-Chocolate-museum.jpeg");
-  background-size: cover;
-}
-.larambla {
-  background: url("../img/Barcelona-La-Rambla.jpg");
-  background-size: cover;
-}
-.parkguell {
-  background: url("../img/Barcelona-Park-Guell.jpg");
-  background-size: cover;
-}
-.picassomuseum {
-  background: url("../img/Barcelona-Picasso-Museum.jpg");
-  background-size: cover;
-}
-.sagradafamilia {
-  background: url("../img/Barcelona-Sagrada-Familia.jpg");
-  background-size: cover;
-}
-.barceloneta {
-  background: url("../img/Barcelona-Barceloneta.jpg");
-  background-size: cover;
-}
-
-.dublincastle {
-  background: url("../img/Dublin Castle.jpg");
-  background-size: cover;
-}
-.stpatrickscathedral {
-  background: url("../img/DublinSt.Patricks Cathedral.jpeg");
-  background-size: cover;
-}
-.guinnessstorehouse {
-  background: url("../img/Dublin-Guinness Storehouse.jpg");
-  background-size: cover;
-}
-.rocknroll {
-  background: url("../img/Dublin-Irish Rock n Roll Museum.jpg");
-  background-size: cover;
-}
-.howth {
-  background: url("../img/Dublin-howth.jpeg");
-  background-size: cover;
-}
-.jamesondistillery {
-  background: url("../img/Dublin-Jameson Distillery.jpg");
-  background-size: cover;
-}
-.silicondocks {
-  background: url("../img/Dublin-Silicon Docks.jpg");
-  background-size: cover;
-}
-.spire {
-  background: url("../img/Dublin-Spire.jpg");
-  background-size: cover;
-}
-.dublinnationalmuseum {
-  background: url("../img/Dublin-National Museum.jpg");
-  background-size: cover;
-}
-.ginzadistrict {
-  background: url("../img/Tokyo-Ginza District.jpg");
-  background-size: cover;
-}
-.kabukizatheatre {
-  background: url("../img/Tokyo-Kabuki-za_Theatre.jpg");
-  background-size: cover;
-}
-.meijishrine {
-  background: url("../img/Tokyo-Meiji Shrine.jpeg");
-  background-size: cover;
-}
-.miraikanmuseum {
-  background: url("../img/Tokyo-Miraikan Museum.jpg");
-  background-size: cover;
-}
-.nationalartcenter {
-  background: url("../img/Tokyo-National Art Center.jpg");
-  background-size: cover;
-}
-.sensojitemple {
-  background: url("../img/Tokyo-sensoji-temple.jpg");
-  background-size: cover;
-}
-.shibuya {
-  background: url("../img/Tokyo-Shibuya.jpg");
-  background-size: cover;
-}
-.skytree {
-  background: url("../img/Tokyo-skytree.jpg");
-  background-size: cover;
-}
-.uenopark {
-  background: url("../img/tokyo-Ueno park.jpg");
-  background-size: cover;
-}
-
-.aquaslibres {
-  background: url("../img/Lisbon-Aquas Libres Aqueduct.jpg");
-  background-size: cover;
-}
-.castelodesaojorge {
-  background: url("../img/Lisbon-castelo-de-sao-jorge.jpg");
-  background-size: cover;
-}
-.elevadordesantajusta {
-  background: url("../img/Lisbon-Elevador de Santa Justa.jpg");
-  background-size: cover;
-}
-.estreladebasilica {
-  background: url("../img/Lisbon-Estrela da Basilica.jpg");
-  background-size: cover;
-}
-.mosteirodosjeronimos {
-  background: url("../img/Lisbon-mosteiro-dos-jeronimos.jpg");
-  background-size: cover;
-}
-.nationalcoachmuseum {
-  background: url("../img/Lisbon-National Coach Museum.JPG");
-  background-size: cover;
-}
-.padraodosdescobrimentos {
-  background: url("../img/Lisbon-padrao-dos-descobrimentos.jpeg");
-  background-size: cover;
-}
-.sintra {
-  background: url("../img/Lisbon-Sintra.jpg");
-  background-size: cover;
-}
-.torrebelem {
-  background: url("../img/Lisbon-torre-belem.jpg");
-  background-size: cover;
 }
