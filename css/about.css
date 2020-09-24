@@ -168,8 +168,12 @@ p {
   background-size: cover;
   z-index: -1; /* to not blur everything*/
 }
+.navbar {
+  margin: 3%;
+}
 .navbar a {
-  color: #1a2639;
+  color: #d9dad7;
+  text-shadow: 0.1rem 0.1rem 0.1rem #1a2639;
   font-size: 1.5rem;
   text-decoration: none;
   margin: 1%;

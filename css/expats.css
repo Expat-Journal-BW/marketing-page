@@ -162,6 +162,12 @@ header {
 header img {
   margin: 2% 2% 0.1%;
   border-radius: 50%;
+  height: 15vw;
+  width: 15vw;
+}
+.expatimageandname {
+  height: 25vh;
+  display: flex;
 }
 .navbar a {
   color: #1a2639;
@@ -189,9 +195,6 @@ header img {
   display: flex;
   flex-direction: column;
   border-bottom: 0.5rem solid #c24d2c;
-}
-.headercontainer img {
-  width: 10vw;
 }
 .citiescontainer {
   display: flex;
@@ -289,6 +292,10 @@ footer {
     font-size: 1.4rem;
     width: 10vw;
   }
+  header img {
+    height: 18vw;
+    width: 18vw;
+  }
 }
 @media (max-width: 1024px) {
   header {
@@ -297,6 +304,11 @@ footer {
   .navbar a {
     width: 12vw;
     font-size: 1.3rem;
+  }
+  header img {
+    margin: 1% 1% 0.1%;
+    height: 23vw;
+    width: 23vw;
   }
   .citiescontainer {
     flex-direction: column;
@@ -341,13 +353,17 @@ footer {
   }
   header {
     padding: 1.5rem;
-    height: 13vh;
+    height: 30%;
   }
-  /* header p {
-    font-size: 1.5rem;
-  } */
+  header img {
+    height: 28vw;
+    width: 28vw;
+  }
+  .expatimageandname {
+    justify-content: space-between;
+  }
   .animation {
-    bottom: -120%;
+    bottom: -150%;
   }
   .navbar a {
     font-size: 1.2rem;
@@ -361,15 +377,27 @@ footer {
 @media (max-width: 500px) {
   header {
     padding: 1%;
-    height: 15vh;
+    height: 18vh;
   }
   .navbar a {
-    font-size: 1rem;
-    margin-top: 1rem;
+    font-size: 0.9rem;
+    margin: 2% 0 5%;
     width: 20vw;
+  }
+  .expatimageandname {
+  }
+  h1 {
+    font-size: 2rem;
   }
   h2 {
     font-size: 2rem;
+  }
+  header {
+    height: 24vh;
+  }
+  header img {
+    height: 35vw;
+    width: 35vw;
   }
   .cityrow {
     flex-direction: column;
