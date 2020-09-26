@@ -162,8 +162,8 @@ header {
 header img {
   margin: 2% 2% 0.1%;
   border-radius: 50%;
-  height: 15vw;
-  width: 15vw;
+  height: 21vh;
+  width: 21vh;
 }
 .expatimageandname {
   height: 25vh;
@@ -287,14 +287,20 @@ footer {
   border-top: 0.5rem solid #c24d2c;
   /* padding:0 1rem; */
 }
+/* @media (max-width: 1800px) {
+  header img {
+    height: 20vh;
+    width: 20vh;
+  }
+} */
 @media (max-width: 1380px) {
   .navbar a {
     font-size: 1.4rem;
     width: 10vw;
   }
   header img {
-    height: 18vw;
-    width: 18vw;
+    height: 18vh;
+    width: 18vh;
   }
 }
 @media (max-width: 1024px) {
@@ -304,11 +310,6 @@ footer {
   .navbar a {
     width: 12vw;
     font-size: 1.3rem;
-  }
-  header img {
-    margin: 1% 1% 0.1%;
-    height: 23vw;
-    width: 23vw;
   }
   .citiescontainer {
     flex-direction: column;
@@ -356,8 +357,8 @@ footer {
     height: 30%;
   }
   header img {
-    height: 28vw;
-    width: 28vw;
+    height: 20vh;
+    width: 20vh;
   }
   .expatimageandname {
     justify-content: space-between;
