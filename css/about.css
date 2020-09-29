@@ -168,9 +168,9 @@ p {
   background-size: cover;
   z-index: -1; /* to not blur everything*/
 }
-.navbar {
+/* .navbar {
   margin: 3%;
-}
+} */
 .navbar a {
   color: #d9dad7;
   text-shadow: 0.1rem 0.1rem 0.1rem #1a2639;
